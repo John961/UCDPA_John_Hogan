@@ -1,11 +1,26 @@
 import pandas as pd
 
-data= pd.read_csv("epl_1819_csv.csv")
+EPL_data= pd.read_csv("epl_1819_csv.csv", index_col = 0)
 
-print(data.head())
+print(EPL_data.head())
 
-unique_teams = data.drop_duplicates(subset=["Team"])
+print(EPL_data.isnull().sum())
+
+print(EPL_data.info())
+
+print(EPL_data.columns)
+
+unique_teams = EPL_data.drop_duplicates()
 print(unique_teams)
 
-print(data.iloc[:, 26:30])
+print(unique_teams.sort_values("attack_scored", ascending=False))
+
+print(unique_teams["attack_scored"].sum())
+
+
+
+
+
+
+
 

@@ -1,12 +1,21 @@
 import pandas as pd
 
-data= pd.read_csv("season-1819_csv.csv")
+German_data= pd.read_csv("season-1819_csv.csv", index_col = 0)
 
-print(data.head())
+print(German_data.head())
 
-print(data.iloc[:, 4:6])
+print(German_data.isnull().sum())
+
+print(German_data.info())
+
+print(German_data.columns)
+
+print(German_data.iloc[:, 3:5])
 print()
 
-df = pd.dataframe(data,columns=['FTHG'])
-sum_column = df.sum('FTHG')
-print(sum_column)
+print(German_data[["FTHG", "FTAG"]].sum())
+print(548 + 425)
+
+
+
+

@@ -1,17 +1,24 @@
 import pandas as pd
+import matplotlib.pyplot as plt
 
-data= pd.read_csv("../FinalProject/laliga_player_stats_english.csv")
+LaLiga_data= pd.read_csv("../FinalProject/laliga_player_stats_english.csv", index_col = 0)
 
-print(data.head())
+print(LaLiga_data.head())
 
-Goals_Scored = data.sort_values("Goals scored", ascending=False)
-print(Goals_Scored)
+print(LaLiga_data.isnull().sum())
 
-print(data.iloc[:, 16:18])
-print()
+print(LaLiga_data.info())
 
-Sum_Goals = ["Goals scored"] + ["Penalties scored"]
-print(Sum_Goals)
+print(LaLiga_data.columns)
+
+print(LaLiga_data.iloc[:, 15:17])
+
+print(LaLiga_data[["Goals scored", "Penalties scored"]].sum())
+print(943 +104)
+
+
+
+
 
 
 
