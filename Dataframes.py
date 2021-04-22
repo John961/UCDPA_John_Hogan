@@ -17,9 +17,5 @@ sns.scatterplot(x="GMV", y="Goals_Scored",data=top3merged, hue="Country")
 plt.xlim([2500, 5500])
 plt.ylim([800, 1200])
 plt.show()
+fig.savefig("Top_3_Revenue.svg")
 
-def Johns_Function
-    print(sns.scatterplot(x="GMV", y="Goals_Scored",data=top3merged, hue="Country")
-plt.xlim([2500, 5500])
-plt.ylim([800, 1200])
-plt.show())

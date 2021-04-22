@@ -13,9 +13,13 @@ print(EPL_data.columns)
 unique_teams = EPL_data.drop_duplicates()
 print(unique_teams)
 
+print(unique_teams.columns)
+
 print(unique_teams.sort_values("attack_scored", ascending=False))
 
 print(unique_teams["attack_scored"].sum())
+
+
 
 
 
